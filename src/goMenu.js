@@ -1,21 +1,27 @@
 export function goMenu(mainContent) {
-    console.log('hello world!');
     mainContent.textContent = "";
     
-    let gusFringImage = document.createElement('img');
-    gusFringImage.src = '/src/images/gus-fring.jpg';
-    gusFringImage.classList.add('los-pollos-image');
-    gusFringImage.alt = 'Gus Fring';
-    gusFringImage.title = 'Copyright Wikimedia Commons';
+    const menuItemPictures = [
+        {imagePath: '/src/images/fried-chicken.jpg', description: "FRIED CHICKEN: What other kind of meal would satisfy your cravings besides our world famous fried chicken? Taste the delicious crunch and you'll never go back to normal food again"}
+    ]
 
-    let descriptionOne = document.createElement('p');
-    descriptionOne.textContent = "Contact Us Here"
-    descriptionOne.classList.add('description');
-    let descriptionTwo = document.createElement('p'); 
-    descriptionTwo.textContent = "123-456-7890";
-    descriptionTwo.classList.add('description');
+    console.log(menuItemPictures[0])
 
-    mainContent.append(gusFringImage, descriptionOne, descriptionTwo); 
-
+    for (let i = 0; i < menuItemPictures.length; i++) {
+        mainContent.append(createMenuItem(menuItemPictures[i].imagePath, menuItemPictures[i].description));
+    }
     return mainContent;
+}
+
+function createMenuItem(imagePath, description) {
+    let menuItem = document.createElement('div');
+    let menuItemImage = document.createElement('img');
+    menuItemImage.src = imagePath;
+    menuItemImage.classList.add('menu-item-image');
+    let menuItemDescription = document.createElement('p');
+    menuItemDescription.textContent = description;
+    menuItemDescription.classList.add('description');
+    menuItem.append(menuItemImage, menuItemDescription);
+    menuItem.classList.add('menu-item');
+    return menuItem;
 }

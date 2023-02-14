@@ -77,6 +77,18 @@ html {
     border-radius: 50%;
 }
 
+.menu-item-image {
+    width: 200px;
+    height: auto;
+}
+
+.menu-item {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
 .description {
     font-weight: 700;
 }
