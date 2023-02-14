@@ -7,15 +7,21 @@
     color: white;
 }
 
+html {
+    background: url(/src/images/fried-chicken.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 
 #content {
-    height: 100vh;
+    height: 100vh; 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
     align-items: center;
-
-    background-image: url(/src/images/fried-chicken.jpg)
 }
 
 .header,
@@ -39,13 +45,23 @@
 
 .tab {
     cursor: pointer;
+    padding: 10px;
+}
+
+.tab.selected {
+    border-top: 1px solid black;
+    border-left: 1px solid black; 
+    border-right: 1px solid black;
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
 }
 
 .main-content {
     justify-self: center; 
     padding: 20px;
     background-color: rgba(100, 100, 100, 0.8);
-    border-radius: 10px;
+    border-radius: 10px; 
+    margin: 30px;
 
     display: flex;
     flex-direction: column;
@@ -53,6 +69,7 @@
     align-items: center;
     gap: 20px;
 } 
+
 
 .los-pollos-image {
     width: 200px;
