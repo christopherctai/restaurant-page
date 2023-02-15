@@ -7,15 +7,17 @@ export function goMenu(mainContent) {
     let heading = document.createElement('div');
     heading.classList.add('heading');
     heading.textContent = "Menu"
-    mainContent.append(heading);
+    let menuItems = document.createElement('div');
+    menuItems.classList.add('menu'); 
     const menuItemPictures = [
         {imagePath: friedChickenImage, description: "FRIED CHICKEN: What other kind of meal would satisfy your cravings besides our world famous fried chicken? Taste the delicious crunch and you'll never go back to normal food again"},
         {imagePath: coleslawImage, description: "COLESLAW: Enjoy the delicious crunch of slimy coleslaw, the only 'healthy' item on the menu! It'll make you feel better about the terrible food you're eating!"},
         {imagePath: toastImage, description: "TOAST: You've never had toast like this before. So good, it tastes like crack"}
     ] 
     for (let i = 0; i < menuItemPictures.length; i++) {
-        mainContent.append(createMenuItem(menuItemPictures[i].imagePath, menuItemPictures[i].description));
+        menuItems.append(createMenuItem(menuItemPictures[i].imagePath, menuItemPictures[i].description));
     }
+    mainContent.append(heading, menuItems)
     return mainContent;
 }
 

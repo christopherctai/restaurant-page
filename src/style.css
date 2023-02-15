@@ -67,6 +67,14 @@ html {
     gap: 20px;
 } 
 
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 20px;
+}
+
 
 .los-pollos-image {
     width: 200px;
@@ -82,8 +90,7 @@ html {
 .menu-item {
     display: flex;
     gap: 20px;
-    justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
 
 .description {
