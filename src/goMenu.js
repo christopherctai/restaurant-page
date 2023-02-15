@@ -1,3 +1,7 @@
+import friedChickenImage from "./images/fried-chicken.jpg";
+import coleslawImage from './images/coleslaw.jpeg';
+import toastImage from './images/toast.jpg';
+
 export function goMenu(mainContent) {
     mainContent.textContent = "";
     let heading = document.createElement('div');
@@ -5,10 +9,10 @@ export function goMenu(mainContent) {
     heading.textContent = "Menu"
     mainContent.append(heading);
     const menuItemPictures = [
-        {imagePath: '/src/images/fried-chicken.jpg', description: "FRIED CHICKEN: What other kind of meal would satisfy your cravings besides our world famous fried chicken? Taste the delicious crunch and you'll never go back to normal food again"},
-        {imagePath: '/src/images/coleslaw.jpeg', description: "COLESLAW: Enjoy the delicious crunch of slimy coleslaw, the only 'healthy' item on the menu! It'll make you feel better about the terrible food you're eating!"},
-        {imagePath: '/src/images/toast.jpg', description: "TOAST: You've never had toast like this before. So good, it tastes like crack"}
-    ]
+        {imagePath: friedChickenImage, description: "FRIED CHICKEN: What other kind of meal would satisfy your cravings besides our world famous fried chicken? Taste the delicious crunch and you'll never go back to normal food again"},
+        {imagePath: coleslawImage, description: "COLESLAW: Enjoy the delicious crunch of slimy coleslaw, the only 'healthy' item on the menu! It'll make you feel better about the terrible food you're eating!"},
+        {imagePath: toastImage, description: "TOAST: You've never had toast like this before. So good, it tastes like crack"}
+    ] 
     for (let i = 0; i < menuItemPictures.length; i++) {
         mainContent.append(createMenuItem(menuItemPictures[i].imagePath, menuItemPictures[i].description));
     }

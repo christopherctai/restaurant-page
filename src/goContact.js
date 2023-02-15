@@ -1,3 +1,5 @@
+import gusFringImage from './images/gus-fring.jpg';
+
 export function goContact(mainContent) {
     mainContent.textContent = "";
 
@@ -6,11 +8,11 @@ export function goContact(mainContent) {
     heading.textContent = "Gas Frang";
     mainContent.append(heading);
     
-    let gusFringImage = document.createElement('img');
-    gusFringImage.src = '/src/images/gus-fring.jpg'; 
-    gusFringImage.classList.add('los-pollos-image');
-    gusFringImage.alt = 'Gus Fring';
-    gusFringImage.title = 'Copyright Wikimedia Commons';
+    let gusFring = document.createElement('img');
+    gusFring.src = gusFringImage; 
+    gusFring.classList.add('los-pollos-image');
+    gusFring.alt = 'Gus Fring';
+    gusFring.title = 'Copyright Wikimedia Commons';
 
     let descriptionOne = document.createElement('p');
     descriptionOne.textContent = "Contact Us Here"
@@ -19,7 +21,7 @@ export function goContact(mainContent) {
     descriptionTwo.textContent = "123-456-7890";
     descriptionTwo.classList.add('description');
 
-    mainContent.append(gusFringImage, descriptionOne, descriptionTwo); 
+    mainContent.append(gusFring, descriptionOne, descriptionTwo); 
 
     return mainContent;
 }

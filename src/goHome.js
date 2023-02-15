@@ -1,12 +1,13 @@
+import losPollosHermanosImage from "./images/los-pollos-hermanos.jpg"; 
 
 export function goHome(mainContent) {
     mainContent.textContent = "";
     
-    let losPollosHermanosImage = document.createElement('img');
-    losPollosHermanosImage.src = '/src/images/los-pollos-hermanos.jpg';
-    losPollosHermanosImage.classList.add('los-pollos-image');
-    losPollosHermanosImage.alt = 'Las Pollas Hermanas';
-    losPollosHermanosImage.title = 'Copyright Wikimedia Commons';
+    let losPollosHermanos = document.createElement('img');
+    losPollosHermanos.src = losPollosHermanosImage;
+    losPollosHermanos.classList.add('los-pollos-image');
+    losPollosHermanos.alt = 'Las Pollas Hermanas';
+    losPollosHermanos.title = 'Copyright Wikimedia Commons';
 
     let descriptionOne = document.createElement('p');
     descriptionOne.textContent = "The World's Finest Fried Chicken"
@@ -15,7 +16,7 @@ export function goHome(mainContent) {
     descriptionTwo.textContent = "Try Some and You'll Never Go Back!";
     descriptionTwo.classList.add('description');
 
-    mainContent.append(losPollosHermanosImage, descriptionOne, descriptionTwo);
+    mainContent.append(losPollosHermanos, descriptionOne, descriptionTwo);
 
-    return mainContent;
+    return mainContent; 
 } 
